@@ -66,6 +66,7 @@ def geomap_plot(d, base_map, color_dict, title = None, labels = None):
         plt.legend(labels[:10])
     else: 
         plt.legend()
+    plt.tight_layout()
 
 colors = ['dodgerblue', 'salmon', 'navajowhite', 'yellowgreen', 'mediumorchid', 'lawngreen', 'orange', 'forestgreen', 'darkmagenta',
           'crimson', 'darkgoldenrod', 'burlywood', 'aqua', 'lightcoral', "violet", 'red', 'green', 'teal', 'hotpink', 'silver', 'black', 'gold']
