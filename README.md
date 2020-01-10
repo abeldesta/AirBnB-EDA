@@ -218,14 +218,15 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 
 ### Geographical Maps
 
-Here I wanted to have geographic visualization that shows the popular borough and districts for host listing .
+Here I wanted to have geographic visualization that shows the popular borough and districts for host listing.
+
+**Figure 5. Geographical Plot of host listings in each borough in NYC.**
 
 <p align="center">
     <img src="images/nyc_map.png"  />
     
 </p>
 
-**Figure 5. Geographical Plot of host listings in each borough in NYC.**
 
 Here you get a geographic representation of data covered above. Manhattan and Brooklyn are the most popular areas for host. 
 
