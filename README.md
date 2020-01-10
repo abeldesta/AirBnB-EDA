@@ -121,7 +121,7 @@ I thought it would be interesting to look into the number of listings each host 
 
 **Table 4. Minimum, Mean, and Maximum days a listing is available for booking in each borough.**
 
-I wanted to look in to availability thru out the year to see if the host complied with the Airbnb "rules". Supposed a host is not allowed to post a property where they do not spend more than 6 months a year. Based on my EDA until this point, I'm sure Airbnb doesnt enforce this "rule". When I check the mean number of days the listings were able to be booked Manhattan and Brooklyn were approximately available for booking 3-4 months out of the year. The other three borough were available about 6 months out of the year, I would assume that is the case because of the lack of popularity in these areas. 
+I wanted to look into availability thru out the year to see if the host complied with the Airbnb or State "rules" on short term regulations. According to Multiple Dwelling Law in NYC, a host is not allowed to rent a property less than 30 days if property is in a multi-family building or the host is not present for the stay. Based on my EDA until this point, I'm sure Airbnb doesnt enforce this "rule". When I check the mean number of days the listings were able to be booked Manhattan and Brooklyn were approximately available for booking 3-4 months out of the year. The other three borough were available about 6 months out of the year, I would assume that is the case because of the lack of popularity in these areas. 
 
 ### Madrid
 
@@ -153,7 +153,7 @@ Here you can see the small difference of how the popular neighborhoods are distr
     <img src="images/room_type_districts.png" />
 <p/>
 
-**Figure 2. Frequency of each room type separated by top 5 districts.**
+**Figure 4. Frequency of each room type separated by top 5 districts.**
 
 In Madrid, it looks like entire homes or apartment is a majority of the market and hotel room is a new category. 
 
@@ -218,17 +218,28 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 
 ### Geographical Maps
 
+Here I wanted to have geographic visualization that shows the popular borough and districts for host listing .
 
 <p align="center">
     <img src="images/nyc_map.png"  />
     
 </p>
 
+**Figure 5. Geographical Plot of host listings in each borough in NYC.**
+
+Here you get a geographic representation of data covered above. Manhattan and Brooklyn are the most popular areas for host. 
 
 <p align="center">
     <img src="images/madrid_map.png"  />
 </p>
-## Conclusion 
 
+**Figure 6. Geographical Plot of host listings in each district in Madrid.**
+
+Here we see thatlistings are heavily concentrated in the center of madrid and as you get further from the center listings get less concentrated. 
 
 # References
+Short-term Rental Regulations in New York City, NY. https://www.useguestbook.com/short-term-rental-regulations/new-york-city/
+
+Quinn, Michelle P Esq. (2017, July) Short-Term (Airbnb) Rentals Are Not Only Illegal But Also Now More Costly. https://www.gdblaw.com/Short-Term-Rentals
+
+Inside Airbnb. http://insideairbnb.com/index.html
