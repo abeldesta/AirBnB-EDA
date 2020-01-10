@@ -220,14 +220,14 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 
 
 <p align="center">
-    <img src="images/madrid_map.png" width = '400' />
+    <img src="images/nyc_map.png"  />
+    
 </p>
 
 
 <p align="center">
-    <img src="images/madrid_map.png" width = '400' />
+    <img src="images/madrid_map.png"  />
 </p>
-
 ## Conclusion 
 
 
