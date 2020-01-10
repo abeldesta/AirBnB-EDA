@@ -224,6 +224,8 @@ Digging deeper into price, host listings counts, and availability in Madrid.
     <img src="images/madrid_map.png" width = '400' />
 </p>
 
+## Conclusion 
 
 
-    
+
+# References

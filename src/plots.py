@@ -41,7 +41,6 @@ def side_by_side_bar(d, title, xlabel, ylabel):
         ax.set_xlabel(xlabel)
         ax.set_ylabel(ylabel)
         ax.set_title(title)
-        # plt.xticks(rotation = 80)
         plt.legend()
         plt.tight_layout(pad=1)
         N -= 1
@@ -135,7 +134,7 @@ if __name__ == "__main__":
     bar_plot(madrid_neighborhood_counts, madrid_neighborhood_labels, 'Top 10 Airbnb Frequency in Madrid by Neighborhood', 'Number of Listings', 'Neighborhoods')
     plt.savefig('images/top20_madrid_neighborhoods.png')
 
-    room_type_by_borough_madrid = grouped_roomtype_count(madrid, 'neighbourhood_group', 10)
+    room_type_by_borough_madrid = grouped_roomtype_count(madrid, 'neighbourhood_group', 5)
     side_by_side_bar(room_type_by_borough_madrid, 'Airbnb Room Type Frequency in Madrid by Districts', 'Districts', 'Number of Listings')
     plt.savefig('images/room_type_districts.png')
 
