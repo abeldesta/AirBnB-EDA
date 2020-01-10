@@ -65,12 +65,29 @@ if __name__ == "__main__":
 
     manhattan = nyc[nyc['neighbourhood_group'] == 'Manhattan'].reset_index()
     not_manhattan = nyc[nyc['neighbourhood_group'] != 'Manhattan'].reset_index()
+    man_vs_city = HypoTest(manhattan, not_manhattan, 'price', 0.05)
 
-    z_score, pval = ztest(manhattan.price, not_manhattan.price, value=0, alternative= 'larger')
 
-    p_val = 1 - stats.norm.cdf(manhattan.price.mean(), not_manhattan.price.mean(), not_manhattan.price.std()/np.sqrt(not_manhattan.shape[0]))
+
+    print('''
+    H0: Mean price of Manhattan and all other boroughs are equal
+    Ha: Mean price of Manhattan is greater than mean price of all other boroughs 
+
+    alpha = 0.05, p_value = {1} 
     
+    Result: {0}'''.format(man_vs_city.test(0, 'larger'), man_vs_city.pval))
 
-    z_score, pval = ztest(madrid.price, nyc.price, value=0, alternative= 'smaller')
+    print('''
+    -----------------------''')
 
-    p_val = stats.norm.cdf(madrid.price.mean(), nyc.price.mean(), nyc.price.std()/np.sqrt(nyc.shape[0]))
+    mad_vs_nyc = HypoTest(nyc, madrid, 'price', 0.05)
+
+    print('''
+    H0: Mean price of NYC and Madrid are equal
+    Ha: Mean price of NYC is greater than mean price of Madrid
+
+    alpha = 0.05, p_value = {1} 
+    
+    Result: {0}'''.format(mad_vs_nyc.test(0, 'larger'), mad_vs_nyc.pval))
+
+    
