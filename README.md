@@ -46,11 +46,12 @@ I first wanted to get an understanding of each city before getting into anything
 ### NYC
 The first couple things that interested me was the frequency of listings in each borough and the top 20 neighborhoods.
 
-![Frequency by Borough!]("images/borough.png")
-<!-- <p align="center">
-<img src="/images/borough.png">
-<img src="/images/top20_neighbourhood_nyc.png">
-</p> -->
+<!-- ![Frequency by Borough](images/borough_nyc.png "bar graph #1") -->
+
+<p align="center">
+    <img src="images/borough_nyc.png" width='300' />
+    <img src="images/top20_neighbourhood_nyc.png" width = '300' />
+</p>
 
 
 
