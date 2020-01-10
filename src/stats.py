@@ -90,4 +90,31 @@ if __name__ == "__main__":
     
     Result: {0}'''.format(mad_vs_nyc.test(0, 'larger'), mad_vs_nyc.pval))
 
+    print('''
+    -----------------------''')
+
+    man_vs_mad = HypoTest(manhattan, madrid, 'price', 0.05)
+
+    print('''
+    H0: Mean price of Manhattan and Madrid are equal
+    Ha: Mean price of Manhattan is greater than mean price of Madrid
+
+    alpha = 0.05, p_value = {1} 
+    
+    Result: {0}'''.format(man_vs_mad.test(0, 'larger'), man_vs_mad.pval))
+    
+    centro  = madrid[madrid['neighbourhood_group'] == 'Centro'] 
+
+    print('''
+    -----------------------''')
+
+    man_vs_cent = HypoTest(manhattan, centro, 'price', 0.05)
+
+    print('''
+    H0: Mean price of Manhattan, NY and Centro, Madrid are equal.
+    Ha: Mean price of Manhattan NY is greater than mean price of Centro, Madrid.
+
+    alpha = 0.05, p_value = {1} 
+    
+    Result: {0}'''.format(man_vs_cent.test(0, 'larger'), man_vs_cent.pval))
     

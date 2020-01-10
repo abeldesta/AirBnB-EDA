@@ -215,6 +215,39 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 **Table 8. Minimum, Mean, and Maximum days a listing is available for booking in each district.**
 
 
+### Hypothesis Tests
+
+#### Manhattan vs New York City
+
+* **Null Hypothesis:** Mean price of Manhattan and all other boroughs are equal
+* **Alternative Hypothesis:** Mean price of NYC is greater than mean price of Madrid
+* **Signifance level** = 0.05
+* **P Value** = 0.0000
+
+We reject the null hypothesis, Manhattan's mean price more expenvsive is more expensive than all other boroughs combined. 
+
+#### Madrid vs New York City 
+
+* **Null Hypothesis:** Mean price of NYC and Madrid are equal
+* **Alternative** Hypothesis: Mean price of NYC is greater than mean price of Madrid
+* **Signifance level** = 0.05
+* **P Value** = 0.0000
+
+We reject the null hypothesis, New York City mean price more expenvsive is more expensive than Madrid. 
+
+#### Manhattan vs Madrid
+
+* **Null Hypothesis:** Mean price of NYC and Madrid are equal
+* **Alternative** Hypothesis: Mean price of NYC is greater than mean price of Madrid
+* **Signifance level** = 0.05
+* **P Value** = 0.0000
+
+We reject the null hypothesis, Manhattan, NY mean price more expenvsive is more expensive than Madrid. 
+
+
+
+
+
 
 ### Geographical Maps
 
