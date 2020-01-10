@@ -215,7 +215,7 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 **Table 8. Minimum, Mean, and Maximum days a listing is available for booking in each district.**
 
 
-### Hypothesis Tests
+## Hypothesis Tests
 
 #### Manhattan vs New York City
 
