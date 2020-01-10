@@ -123,8 +123,14 @@ I thought it would be interesting to look into the number of listings each host 
 
 I wanted to look in to availability thru out the year to see if the host complied with the Airbnb "rules". Supposed a host is not allowed to post a property where they do not spend more than 6 months a year. Based on my EDA until this point, I'm sure Airbnb doesnt enforce this "rule". When I check the mean number of days the listings were able to be booked Manhattan and Brooklyn were approximately available for booking 3-4 months out of the year. The other three borough were available about 6 months out of the year, I would assume that is the case because of the lack of popularity in these areas. 
 
+### Madrid
 
+<p align="center">
+    <img src="images/district_madrid.png" width='400' />
+    <img src="images/top5_madrid_neighborhoods.png" width = '400' />
+</p>
 
+**Figure 3. Frequency of listings in each district and the top 20 neighborhoods in Madrdid.**
 
 
 

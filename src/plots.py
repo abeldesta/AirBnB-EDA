@@ -122,8 +122,8 @@ if __name__ == "__main__":
     geomap_plot(grouped_geo_df, nyc_map, nyc_colors, title = 'Airbnb Listings in New York City')
     plt.savefig('images/nyc_map.png')
 
-    district_labels, district_counts = eda.top_20(madrid, 'neighbourhood_group')
-    madrid_neighborhood_labels, madrid_neighborhood_counts = eda.top_20(madrid, 'neighbourhood')
+    district_labels, district_counts = eda.top_20(madrid, 'neighbourhood_group', 10)
+    madrid_neighborhood_labels, madrid_neighborhood_counts = eda.top_20(madrid, 'neighbourhood', 10)
     bar_plot(district_counts, district_labels, 'Airbnb Frequency in Madrid by District', 'Number of Listings', 'District')
     plt.savefig('images/district_madrid.png')
     bar_plot(madrid_neighborhood_counts, madrid_neighborhood_labels, 'Top 20 Airbnb Frequency in Madrid by Neighborhood', 'Number of Listings', 'Neighborhoods')

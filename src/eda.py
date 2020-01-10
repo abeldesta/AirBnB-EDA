@@ -11,6 +11,12 @@ plt.style.use('ggplot')
 nyc = pd.read_csv('data/nyc_data.csv')
 madrid = pd.read_csv('data/madrid_data.csv')
 
+def top_20(data, col_name, n = 20):
+    count = data[col_name].value_counts()
+    top20 = count[:n]
+    labels = top20.index
+    return labels, top20
+
 def nested_dictionary(data, col_name):
     unique_vals = set(data[col_name])
     subdatasets = dict()
@@ -114,7 +120,7 @@ if __name__ == "__main__":
     room_type_boro = grouped_roomtype_count(nyc, 'neighbourhood_group', 5)
     room_counts = roomtype_count(nyc)
 
-
+    print('----------------------')
 
     print('''The number of listings per host: min: {0}, mean: {1}, max: {2}'''.format(nyc['calculated_host_listings_count'].min(), nyc['calculated_host_listings_count'].mean(), nyc['calculated_host_listings_count'].max()))
     print('Total number of unique hosts: {0}'.format(len(nyc['host_id'].unique())))
@@ -124,7 +130,84 @@ if __name__ == "__main__":
     print('The number of listings where host has more than 10 locations: {0}'.format(len(multi_listings)))
     print('The number of hosts with more than 10 listings: {0}'.format(len(multi_listings['host_id'].unique())))
     
+    print('----------------------') 
+    print('----------------------') 
+
+    neighborhood_listing_count_mad = madrid['neighbourhood'].value_counts()
+    top20_madrid_neighborhoods = neighborhood_listing_count_mad[:10]
+    top20_labels_mad = top20_madrid_neighborhoods.index
     
+    print('Top 20 neighbourhoods in Madrid: {0}'.format(list(top20_labels_mad)))
+    count = {}
+    for i in list(set(madrid['neighbourhood_group'])):
+        hoods = set(madrid[madrid['neighbourhood_group'] == i]['neighbourhood'])
+        for j in list(hoods):
+            if j in list(top20_labels_mad):
+                if i not in count:
+                    count[i] = 1
+                else: 
+                    count[i] += 1
+
+    print('The counts of how many top 20 neighborhoods within each district: {0}'.format(count))
+
+
+
+    print('Mean price of a listing in Madrid: {0}'.format(madrid['price'].mean()))
+    
+    districts_dict = nested_dictionary(madrid, 'neighbourhood_group')
+    for k,v in districts_dict.items():
+        print('Mean price in {0}, Madrid: {1}'.format(k, v['price'].mean()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Min price in {0}, Madrid: {1}'.format(k, v['price'].min()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Max price in {0}, Madrid: {1}'.format(k, v['price'].max()))
+    print('----------------------')
+
+    for k,v in districts_dict.items():
+        print('Mean availability in {0}, Madrid: {1} days'.format(k, v['availability_365'].mean()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Min availability in {0}, Madrid: {1} days'.format(k, v['availability_365'].min()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Max availability in {0}, Madrid: {1} days'.format(k, v['availability_365'].max()))
+    print('----------------------')
+        
+    for k,v in districts_dict.items():
+        print('Mean host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].mean()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Min host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].min()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Max host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].max()))
+    print('----------------------')    
+
+    centro = madrid[madrid['neighbourhood_group'] == 'Centro']
+    not_centro = madrid[madrid['neighbourhood_group'] != 'Centro']
+
+    print('''Mean and standard deviation of price in Centro, is {0} and {1}'''
+            .format(centro['price'].mean(), centro['price'].std()))
 
     
+    print('''Mean and standard deviation of price in all other districts in Madrid is {0} and {1}'''
+            .format(not_centro['price'].mean(), not_centro['price'].std()))
+
+    print('----------------------')
+
+    room_type_boro = grouped_roomtype_count(madrid, 'neighbourhood_group', 5)
+    room_counts = roomtype_count(madrid)
+
+
+
+    print('''The number of listings per host: min: {0}, mean: {1}, max: {2}'''.format(madrid['calculated_host_listings_count'].min(), madrid['calculated_host_listings_count'].mean(), madrid['calculated_host_listings_count'].max()))
+    print('Total number of unique hosts: {0}'.format(len(madrid['host_id'].unique())))
+
+    multi_listings_madrid = madrid[madrid['calculated_host_listings_count'] > 10]  
+    
+    print('The number of listings where host has more than 10 locations: {0}'.format(len(multi_listings_madrid)))
+    print('The number of hosts with more than 10 listings: {0}'.format(len(multi_listings_madrid['host_id'].unique())))
+
 
