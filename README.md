@@ -219,30 +219,30 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 
 #### Manhattan vs New York City
 
-* **Null Hypothesis:** Mean price of Manhattan and all other boroughs are equal
-* **Alternative Hypothesis:** Mean price of NYC is greater than mean price of Madrid
+* **Null Hypothesis:** Mean price of Manhattan and all other boroughs are equal.
+* **Alternative Hypothesis:** Mean price of NYC is greater than mean price of Madrid.
 * **Signifance level** = 0.05
 * **P Value** = 0.0000
 
-We reject the null hypothesis, Manhattan's mean price more expenvsive is more expensive than all other boroughs combined. 
+We reject the null hypothesis, Manhattan's mean price is more expenvsive than all other boroughs combined. 
 
 #### Madrid vs New York City 
 
-* **Null Hypothesis:** Mean price of NYC and Madrid are equal
-* **Alternative** Hypothesis: Mean price of NYC is greater than mean price of Madrid
+* **Null Hypothesis:** Mean price of NYC and Madrid are equal.
+* **Alternative** Hypothesis: Mean price of NYC is greater than mean price of Madrid.
 * **Signifance level** = 0.05
 * **P Value** = 0.0000
 
-We reject the null hypothesis, New York City mean price more expenvsive is more expensive than Madrid. 
+We reject the null hypothesis, New York City is mean price more expenvsive is more expensive than Madrid. 
 
-#### Manhattan vs Madrid
+#### Manhattan vs Centro
 
-* **Null Hypothesis:** Mean price of NYC and Madrid are equal
-* **Alternative** Hypothesis: Mean price of NYC is greater than mean price of Madrid
+* **Null Hypothesis:** Mean price of Manhattan, NY and Centro, Madrid are equal.
+* **Alternative** Hypothesis: Mean price of Manhattan, NY is greater than mean price of Centro, Madrid.
 * **Signifance level** = 0.05
 * **P Value** = 0.0000
 
-We reject the null hypothesis, Manhattan, NY mean price more expenvsive is more expensive than Madrid. 
+We reject the null hypothesis, Manhattan, NY mean price is more expenvsive is more expensive than Centro, Madrid. 
 
 
 
