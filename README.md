@@ -233,7 +233,16 @@ We reject the null hypothesis, Manhattan's mean price is more expenvsive than al
 * **Signifance level** = 0.05
 * **P Value** = 0.0000
 
-We reject the null hypothesis, New York City is mean price more expenvsive is more expensive than Madrid. 
+We reject the null hypothesis, New York City's mean price is more expenvsive than Madrid. 
+
+#### Manhattan vs Madrid
+
+* **Null Hypothesis:** Mean price of Manhattan and Madrid are equal.
+* **Alternative** Hypothesis: Mean price of Manhattan is greater than mean price of Madrid.
+* **Signifance level** = 0.05
+* **P Value** = 0.0000
+
+We reject the null hypothesis, Manhattan's mean price is more expenvsive than Madrid. 
 
 #### Manhattan vs Centro
 
@@ -242,7 +251,7 @@ We reject the null hypothesis, New York City is mean price more expenvsive is mo
 * **Signifance level** = 0.05
 * **P Value** = 0.0000
 
-We reject the null hypothesis, Manhattan, NY mean price is more expenvsive is more expensive than Centro, Madrid. 
+We reject the null hypothesis, Manhattan's mean price is more expenvsive than Centro, Madrid. 
 
 
 
