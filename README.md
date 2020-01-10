@@ -49,8 +49,8 @@ The first couple things that interested me was the frequency of listings in each
 <!-- ![Frequency by Borough](images/borough_nyc.png "bar graph #1") -->
 
 <p align="center">
-    <img src="images/borough_nyc.png" width='300' />
-    <img src="images/top20_neighbourhood_nyc.png" width = '300' />
+    <img src="images/borough_nyc.png" width='400' />
+    <img src="images/top20_neighbourhood_nyc.png" width = '400' />
 </p>
 
 
