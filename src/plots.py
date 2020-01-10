@@ -8,6 +8,12 @@ import geoplot
 import eda
 plt.style.use('ggplot')
 
+def top_20(data, col_name, n = 20):
+    count = data[col_name].value_counts()
+    top20 = count[:n]
+    labels = top20.index
+    return labels, top20
+
 
 def bar_plot(data, labels, title = None, xlabel = None, ylabel = None):
     fig, ax = plt.subplots(1,1)
@@ -51,7 +57,7 @@ def nested_dictionary(data, col_name):
     return subdatasets
 
 def geomap_plot(d, base_map, color_dict, title = None, labels = None):
-    fig, ax = plt.subplots(1,1)
+    fig, ax = plt.subplots(1,1, figsize = (10, 10))
     ax.set_aspect('equal')
     base = base_map.plot(ax = ax, alpha=0.5, edgecolor='k')
     for k,v in d.items():
@@ -103,8 +109,8 @@ if __name__ == "__main__":
 
 
     #EDA plot
-    borough_labels, borough_counts = eda.top_20(nyc, 'neighbourhood_group')
-    neighborhood_labels, neighborhood_counts = eda.top_20(nyc, 'neighbourhood')
+    borough_labels, borough_counts = top_20(nyc, 'neighbourhood_group')
+    neighborhood_labels, neighborhood_counts = top_20(nyc, 'neighbourhood')
     bar_plot(borough_counts, borough_labels, 'Airbnb Frequency in NYC by Borough', 'Number of Listings', 'Boroughs')
     plt.savefig('images/borough_nyc.png')
     bar_plot(neighborhood_counts, neighborhood_labels, 'Airbnb Frequency in NYC by Neighborhood', 'Number of Listings', 'Neighborhoods')
@@ -122,14 +128,14 @@ if __name__ == "__main__":
     geomap_plot(grouped_geo_df, nyc_map, nyc_colors, title = 'Airbnb Listings in New York City')
     plt.savefig('images/nyc_map.png')
 
-    district_labels, district_counts = eda.top_20(madrid, 'neighbourhood_group', 10)
-    madrid_neighborhood_labels, madrid_neighborhood_counts = eda.top_20(madrid, 'neighbourhood', 10)
-    bar_plot(district_counts, district_labels, 'Airbnb Frequency in Madrid by District', 'Number of Listings', 'District')
+    district_labels, district_counts = top_20(madrid, 'neighbourhood_group', 10)
+    madrid_neighborhood_labels, madrid_neighborhood_counts = top_20(madrid, 'neighbourhood', 20)
+    bar_plot(district_counts, district_labels, 'Top 20 Airbnb Frequency in Madrid by District', 'Number of Listings', 'District')
     plt.savefig('images/district_madrid.png')
-    bar_plot(madrid_neighborhood_counts, madrid_neighborhood_labels, 'Top 20 Airbnb Frequency in Madrid by Neighborhood', 'Number of Listings', 'Neighborhoods')
-    plt.savefig('images/top5_madrid_neighborhoods.png')
+    bar_plot(madrid_neighborhood_counts, madrid_neighborhood_labels, 'Top 10 Airbnb Frequency in Madrid by Neighborhood', 'Number of Listings', 'Neighborhoods')
+    plt.savefig('images/top20_madrid_neighborhoods.png')
 
-    room_type_by_borough_madrid = grouped_roomtype_count(madrid, 'neighbourhood_group', 5)
+    room_type_by_borough_madrid = grouped_roomtype_count(madrid, 'neighbourhood_group', 10)
     side_by_side_bar(room_type_by_borough_madrid, 'Airbnb Room Type Frequency in Madrid by Districts', 'Districts', 'Number of Listings')
     plt.savefig('images/room_type_districts.png')
 

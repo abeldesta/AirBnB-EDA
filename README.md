@@ -66,7 +66,7 @@ In the right chart you see the same graph but the frequency is grouped by neighb
 | Staten Island | 0 |
 | Bronx | 0 |
 
-**Table 1. Number of neighborhoods in top 20.**
+**Table 1. Number of top 20 neighborhoods in each districts.**
 
 Digging deeper into the listings in each borough, I wanted to see whether room types change depending on location. 
 
@@ -127,10 +127,102 @@ I wanted to look in to availability thru out the year to see if the host complie
 
 <p align="center">
     <img src="images/district_madrid.png" width='400' />
-    <img src="images/top5_madrid_neighborhoods.png" width = '400' />
+    <img src="images/top20_madrid_neighborhoods.png" width = '400' />
 </p>
 
 **Figure 3. Frequency of listings in each district and the top 20 neighborhoods in Madrdid.**
+
+One thing to point out is that Madrid has 21 districts which is quite a bit more than NYC 5 boroghs, so I decide to drop anaylsis to the top 10 districts. The EDA for Madrid for the most part was the same process. The aspect that pops out in the left chart is the the listings in Madrid are heavily concentrated in Centro, more so than NYC. On the right, listings are more evenly distributed, but we have to check where how many top 10 neighborhoods are in the districts.
+
+| District | Neighborhood Count |
+| ------- | ------------------ |
+| Centro | 6 |
+| Chamberí | 5 |
+| Salamanca | 4 |
+| Retiro | 1 |
+| Tetuán | 1 |
+| Latina | 1 |
+| Moncloa - Aravaca | 1 |
+| Arganzuela | 1 |
+
+**Table 5. Number of top 20 neighborhoods in each districts.**
+
+Here you can see the small difference of how the popular neighborhoods are distrbuted in Madrid than NYC.
+
+<p align="center">
+    <img src="images/room_type_districts.png" />
+<p/>
+
+**Figure 2. Frequency of each room type separated by top 5 districts.**
+
+In Madrid, it looks like entire homes or apartment is a majority of the market and hotel room is a new category. 
+
+Digging deeper into price, host listings counts, and availability in Madrid. 
+
+#### Price
+
+| District |  Min Price | Mean Price | Max Price |
+| -------- | ---------- | ---------- | --------- |
+| Centro | 10 | 129.87 | 9999 |
+| Ciudad Lineal | 8 | 115.53 | 3000 |
+| Salamanca | 10 | 152.78 | 8930 |
+| Retiro | 9 | 116.48 | 6000 |
+| Tetuán | 12 | 160.77 | 8601 |
+| Latina | 9 | 125.72 |1890 |
+| Moncloa - Aravaca | 9 |  116.84 | 2950 |
+| Carabanchel | 9 | 80.11 | 3000 |
+| Puente de Vallecas | 9 | 85.73 | 4000 |
+| Arganzuela | 8 |  93.80| 8465 |
+
+
+**Table 6. Minimum, Mean, and Maximum prices in each top 10 district.**
+
+#### Host Listing Count
+
+| District |  Min Count | Mean Count | Max Count |
+| -------- | ---------- | ---------- | --------- |
+| Centro | 1 | 14 | 231 |
+| Ciudad Lineal | 1| 3 | 110 |
+| Salamanca | 1 | 21 | 231 |
+| Retiro | 1 | 9 | 231 |
+| Tetuán | 1 | 10 | 231 |
+| Latina | 1 | 9 | 124 |
+| Moncloa - Aravaca | 1 |  10 | 156 |
+| Carabanchel | 1 | 5 | 56 |
+| Puente de Vallecas | 1 | 5| 51 |
+| Arganzuela | 1 |  6| 156 |
+| Madrid | 1 |  12| 231 |
+
+**Table 7. Minimum, Mean, and Maximum number of host listings in each top 10 district.**
+
+#### Availability 
+
+| District |  Mean Count |
+| -------- | ----------- |
+| Centro | 157 | 
+| Ciudad Lineal | 154|
+| Salamanca | 149.30 | 
+| Retiro | 150| 
+| Tetuán | 151 | 
+| Latina | 152| 
+| Moncloa - Aravaca | 151 |
+| Carabanchel | 172 | 
+| Puente de Vallecas | 169 |
+| Arganzuela | 128 | 
+| Madrid | 155 | 
+
+
+**Table 8. Minimum, Mean, and Maximum days a listing is available for booking in each district.**
+
+
+
+### Geographical Maps
+
+
+<p align="center">
+    <img src="images/nyc_map.png" width='400' />
+    <img src="images/madrid_map.png" width = '400' />
+</p>
 
 
 
