@@ -73,6 +73,33 @@ if __name__ == "__main__":
     boroughs_dict = nested_dictionary(nyc, 'neighbourhood_group')
     for k,v in boroughs_dict.items():
         print('Mean price in {0}, NY: {1}'.format(k, v['price'].mean()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Min price in {0}, NY: {1}'.format(k, v['price'].min()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Max price in {0}, NY: {1}'.format(k, v['price'].max()))
+    print('----------------------')
+
+    for k,v in boroughs_dict.items():
+        print('Mean availability in {0}, NY: {1} days'.format(k, v['availability_365'].mean()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Min availability in {0}, NY: {1} days'.format(k, v['availability_365'].min()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Max availability in {0}, NY: {1} days'.format(k, v['availability_365'].max()))
+    print('----------------------')
+        
+    for k,v in boroughs_dict.items():
+        print('Mean host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].mean()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Min host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].min()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Max host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].max()))
+    print('----------------------')    
 
     manhattan = nyc[nyc['neighbourhood_group'] == 'Manhattan']
     not_manhattan = nyc[nyc['neighbourhood_group'] != 'Manhattan']
