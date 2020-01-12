@@ -162,8 +162,8 @@ Digging deeper into price, host listings counts, and availability in Madrid.
 Here I wanted to have geographic visualization that shows the popular borough and districts for host listing.
 
 <p align="center">
-    <img src="images/nyc_map.png" width = '500' />
-    <img src="images/madrid_map.png" width = '500' />
+    <img src="images/nyc_map.png" width = '400' />
+    <img src="images/madrid_map.png" width = '400' />
 </p>
 
 **Figure 5. Geographical Plot of host listings in each borough in NYC and each district in Madrid..**
