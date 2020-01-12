@@ -159,6 +159,17 @@ In Madrid, it looks like entire homes or apartment is a majority of the market a
 
 Digging deeper into price, host listings counts, and availability in Madrid. 
 
+Here I wanted to have geographic visualization that shows the popular borough and districts for host listing.
+
+<p align="center">
+    <img src="images/nyc_map.png" width = '600' />
+    <img src="images/madrid_map.png" width = '600' />
+</p>
+
+**Figure 5. Geographical Plot of host listings in each borough in NYC and each district in Madrid..**
+
+Here you get a geographic representation of data covered above. Manhattan and Brooklyn are the most popular areas for host. In Madrid, we see that listings are heavily concentrated in the center of madrid and as you get further from the center listings get less concentrated.
+
 #### Price
 
 | District |  Min Price | Mean Price | Max Price |
@@ -253,31 +264,6 @@ We reject the null hypothesis, Manhattan's mean price is more expenvsive than Ma
 
 We reject the null hypothesis, Manhattan's mean price is more expenvsive than Centro, Madrid. 
 
-
-
-
-
-
-### Geographical Maps
-
-Here I wanted to have geographic visualization that shows the popular borough and districts for host listing.
-
-<p align="center">
-    <img src="images/nyc_map.png"  />
-    
-</p>
-
-**Figure 5. Geographical Plot of host listings in each borough in NYC.**
-
-Here you get a geographic representation of data covered above. Manhattan and Brooklyn are the most popular areas for host. 
-
-<p align="center">
-    <img src="images/madrid_map.png"  />
-</p>
-
-**Figure 6. Geographical Plot of host listings in each district in Madrid.**
-
-Here we see thatlistings are heavily concentrated in the center of madrid and as you get further from the center listings get less concentrated. 
 
 # References
 Short-term Rental Regulations in New York City, NY. https://www.useguestbook.com/short-term-rental-regulations/new-york-city/
