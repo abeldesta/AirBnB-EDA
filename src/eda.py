@@ -74,11 +74,11 @@ if __name__ == "__main__":
 
 
 
-    print('Mean price of a listing in NYC: {0}'.format(nyc['price'].mean()))
+    print('Median price of a listing in NYC: {0}'.format(nyc['price'].median()))
     
     boroughs_dict = nested_dictionary(nyc, 'neighbourhood_group')
     for k,v in boroughs_dict.items():
-        print('Mean price in {0}, NY: {1}'.format(k, v['price'].mean()))
+        print('Median price in {0}, NY: {1}'.format(k, v['price'].median()))
     print('----------------------')
     for k,v in boroughs_dict.items():
         print('Min price in {0}, NY: {1}'.format(k, v['price'].min()))
@@ -99,6 +99,9 @@ if __name__ == "__main__":
         
     for k,v in boroughs_dict.items():
         print('Mean host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].mean()))
+    print('----------------------')
+    for k,v in boroughs_dict.items():
+        print('Median host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].median()))
     print('----------------------')
     for k,v in boroughs_dict.items():
         print('Min host listing count in {0}, NY: {1} '.format(k, v['calculated_host_listings_count'].min()))
@@ -152,11 +155,11 @@ if __name__ == "__main__":
 
 
 
-    print('Mean price of a listing in Madrid: {0}'.format(madrid['price'].mean()))
+    print('Median price of a listing in Madrid: {0}'.format(madrid['price'].median()))
     
     districts_dict = nested_dictionary(madrid, 'neighbourhood_group')
     for k,v in districts_dict.items():
-        print('Mean price in {0}, Madrid: {1}'.format(k, v['price'].mean()))
+        print('Median price in {0}, Madrid: {1}'.format(k, v['price'].median()))
     print('----------------------')
     for k,v in districts_dict.items():
         print('Min price in {0}, Madrid: {1}'.format(k, v['price'].min()))
@@ -177,6 +180,9 @@ if __name__ == "__main__":
         
     for k,v in districts_dict.items():
         print('Mean host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].mean()))
+    print('----------------------')
+    for k,v in districts_dict.items():
+        print('Median host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].median()))
     print('----------------------')
     for k,v in districts_dict.items():
         print('Min host listing count in {0}, Madrid: {1} '.format(k, v['calculated_host_listings_count'].min()))
