@@ -82,13 +82,13 @@ There were three other columns I spent some time looking into: Price, Calculated
 
 #### Price 
 
-| Borough | Min Price | Mean Price | Max Price |
+| Borough | Min Price | Median Price | Max Price |
 | ------- | --------- | ---------- | --------- |
-| Manhattan | 0 | 196.87 | 10000 |
-| Brooklyn | 0 | 124.38 | 10000 |
-| Queens | 10 | 99.52 | 10000 |
-| Staten Island | 13 | 114.81 | 5000 |
-| Bronx | 0 | 87.50 | 2500 |
+| Manhattan | 0 | 150.00 | 10000 |
+| Brooklyn | 0 | 90.00 | 10000 |
+| Queens | 10 | 75.00 | 10000 |
+| Staten Island | 13 | 75.00 | 5000 |
+| Bronx | 0 | 65.00 | 2500 |
 
 **Table 2. Minimum, Mean, and Maximum prices in each borough.**
 
@@ -172,18 +172,18 @@ Here you get a geographic representation of data covered above. Manhattan and Br
 
 #### Price
 
-| District |  Min Price | Mean Price | Max Price |
+| District |  Min Price | Median Price | Max Price |
 | -------- | ---------- | ---------- | --------- |
-| Centro | 10 | 129.87 | 9999 |
-| Ciudad Lineal | 8 | 115.53 | 3000 |
-| Salamanca | 10 | 152.78 | 8930 |
-| Retiro | 9 | 116.48 | 6000 |
-| Tetuán | 12 | 160.77 | 8601 |
-| Latina | 9 | 125.72 |1890 |
-| Moncloa - Aravaca | 9 |  116.84 | 2950 |
-| Carabanchel | 9 | 80.11 | 3000 |
-| Puente de Vallecas | 9 | 85.73 | 4000 |
-| Arganzuela | 8 |  93.80| 8465 |
+| Centro | 10 | 75.00 | 9999 |
+| Ciudad Lineal | 8 | 45.00 | 3000 |
+| Salamanca | 10 | 78.00 | 8930 |
+| Retiro | 9 | 65.00 | 6000 |
+| Tetuán | 12 | 59.00 | 8601 |
+| Latina | 9 | 40.00 |1890 |
+| Moncloa - Aravaca | 9 |  60.00 | 2950 |
+| Carabanchel | 9 | 40.00 | 3000 |
+| Puente de Vallecas | 9 | 35.00 | 4000 |
+| Arganzuela | 8 |  53.00| 8465 |
 
 
 **Table 6. Minimum, Mean, and Maximum prices in each top 10 district.**
